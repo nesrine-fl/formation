@@ -12,27 +12,40 @@
 <div>
     <div class="menu-icon" onclick="toggleNav()">☰</div>
     <!-- Navbar cachée au départ -->
-    <div class="sidebar" id="sidebar">
-      <div>
-        <button class="close-btn" onclick="toggleNav()">✖</button>
-        <ul>
-          <ul class="sidebar-menu">
-            <li><a href="#" class="active"><img src="home.png" alt="Accueil"> Accueil</a></li>
-            <li><a href="https://moumouh6.github.io/Profile-page/"><img src="profile.png" alt="Profile"> Profile</a></li>
-            <li><a href="#"><img src="mondepartement.png" alt="Mon département"> Mon département</a></li>
-            <li><a href="#"><img src="mescours.png" alt="Mes cours"> Mes cours</a></li>
-            <li><a href="#"><img src="requeststatus (1).png" alt="Requetes Status"> Requetes Status</a></li>
-            <li><a href="https://moumouh6.github.io/Messages/"><img src="messages.png" alt="Message"> Message</a></li>
-            <li><a href="#"><img src="nottif.png" alt="Notification"> Notification</a></li>
-            <li><a href="#"><img src="aide.png" alt="Aide"> Aide</a></li>
-        </ul>
-      </div>
+    <div id="sidebar" class="sidebar">
+    <div>
+      <button class="close-btn" onclick="toggleSidebar()">✖</button>
+      <ul >
+        
+          <li><a href="https://am11iin.github.io/dashboard-teacher/">
+              <i class="fas fa-home"></i> Accueil</a></li>
+          <li><a href="https://moumouh6.github.io/Profile-page/">
+              <i class="fas fa-user"></i> Profile</a></li>
+          <li><a href="https://nesrine-fl.github.io/site-request/request.html">
+              <i class="fas fa-users"></i> demandes de comptes </a></li>    
+          <li><a href="https://nesrine-fl.github.io/formation/ajouter.html">
+              <i class="fas fa-book"></i> demandes de Formation </a></li>    
+          <li><a href="#" class="active">
+              <i class="fas fa-calendar"></i> Calendrier</a></li>    
+          <li><a href="https://moumouh6.github.io/Messages/">
+              <i class="fas fa-envelope"></i> Messages</a></li>
+          <li><a href="https://moumouh6.github.io/Notification/">
+              <i class="fas fa-bell"></i> Notifications</a></li>
+          <li><a href="https://moumouh6.github.io/Aide/">
+              <i class="fas fa-question-circle"></i> Aide</a></li>
+      </ul>
+  </div>
 
-      <div class="sidebar-footer">
-        <a  class="site-mzl"> Paramètres</a>
-        <a href="https://moumouh6.github.io/Interface/" class="logout"> Se déconnecter</a>
-      </div>
-    </div>
+  <div class="sidebar-footer">
+      <a class="site-mzl"><i class="fas fa-cog"></i> Paramètres</a>
+      <a href="https://moumouh6.github.io/Interface/" class="logout">
+          <i class="fas fa-sign-out-alt"></i> Se déconnecter</a>
+  </div>
+
+
+</div>
+
+
 <body>
     
 
@@ -159,19 +172,8 @@
 
                 <label>Type :</label>
                 <input type="text">
-                <div class="form-group">
-                  <label for="status">Statut :</label>
-                  <select id="status" name="status" class="status-dropdown">
-                      <option value="processing">Processing</option>
-                      <option value="warning">Warning</option>
-                      <option value="verified">Verified</option>
-                      <option value="failed">Failed</option>
-                  </select>
+                <div class="form-group">  
               </div>
-              
-<br>
-<br>
-
                 <label>Description :</label>
                 <textarea></textarea>
 
