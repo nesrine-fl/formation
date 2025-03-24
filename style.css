@@ -235,7 +235,7 @@ header {
 
 .table-container {
 
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
     background: rgb(255, 255, 255);
     border-radius: 10px;
@@ -244,7 +244,7 @@ header {
 }
 
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     color: black;
 }
@@ -719,17 +719,6 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 1500px) {
-  .hero-text {
-      text-align: center;
-      padding-bottom: 5%;
-  }
-
-  .buttons {
-      justify-content: center;
-  }
-
-}
 @media (max-width: 768px) {
   /* Centrer le header */
   .top-bar {
