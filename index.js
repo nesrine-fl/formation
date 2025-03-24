@@ -220,12 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  // Nav barre
- function toggleNav() {
-    let sidebar = document.getElementById("sidebar");
-    document.getElementById("sidebar").classList.toggle("open");
-    sidebar.classList.toggle("active");
 
-}
 
     // Ajouter les événements pour déclencher le filtrage
     searchInput.addEventListener("input", filterCourses);
