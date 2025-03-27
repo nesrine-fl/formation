@@ -19,7 +19,7 @@ header {
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex;
     padding: 20px 20px;
   }
   #add-formation {
@@ -38,181 +38,8 @@ header {
 
 #add-formation:hover {
     background-color: #0056b3; /* Darker blue */
- 
+    
 }
-
-.sidebar {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #fff;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
-  color: #333;
-  transition: left 0.3s ease-in-out;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-  border-right: 1px solid #ddd;
-}
-
-
-/* Style for icons */
-.sidebar ul li a i,
-.sidebar-footer a i {
-  margin-right: 10px;
-  font-size: 18px;
-  color: #555;
-  transition: color 0.3s ease-in-out;
-}
-
-
-
-/* Change icon color on hover */
-.sidebar ul li a:hover i,
-.sidebar-footer a:hover i {
-  color: blue;
-}
-.sidebar-footer .logout:hover i{
-  color: red;
-}
-
-
-
-
-/* ✖ Close Button */
-.close-btn {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: none;
-  border: none;
-  color: #333;
-  font-size: 22px;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.close-btn:hover {
-  transform: rotate(90deg);
-  color: red;
-}
-
-/* 📌 Sidebar Navigation Links */
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 60px 0 0;
-}
-
-.sidebar ul li {
-  padding: 15px;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.sidebar ul li:hover {
-  background: #f0f0f0;
-}
-
-/* 🌟 Sidebar Links */
-.sidebar ul li a {
-  display: flex;
-  align-items: center;
-  color: #333;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 12px;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-  border-radius: 5px;
-}
-
-.sidebar ul li a:hover {
-  background: rgba(0, 0, 255, 0.1);
-  color: blue;
-  transform: translateX(5px);
-}
-
-/* 🔵 Active Link */
-.sidebar ul li a.active {
-  color: blue;
-  border-left: 4px solid blue;
-  background: rgba(0, 0, 255, 0.1);
-}
-
-/* ⚙ Sidebar Footer (Settings & Logout) */
-.sidebar-footer {
-  padding: 15px;
-  border-top: 1px solid #ddd;
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-footer a {
-  display: flex;
-  align-items: center;
-  color: #333;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 12px;
-  font-weight: 600;
-  transition: all 0.3s ease-in-out;
-}
-
-.sidebar-footer a:hover {
-  background: rgba(0, 0, 255, 0.1);
-  color: blue;
-  transform: translateX(5px);
-}
-
-/* 🔴 Logout Button */
-.sidebar-footer .logout {
-  color: red;
-  font-weight: bold;
-}
-
-.sidebar-footer .logout:hover {
-  background: rgba(255, 0, 0, 0.1);
-  color: darkred;
-}
-
-/* 📌 Sidebar Visibility */
-.sidebar.active {
-  left: 0;
-}
-
-
-
-
-
-
-
-
-.active {
-  color: #000;
-
-}
-
-.sidebar h2, .sidebar p {
-  padding: 8px 10px;
-}
-/* Close button */
-/* .close-btn {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 36px;
-  color: black;
-  background: none;
-  border: none;
-  cursor: pointer;
-} */
 
 
 .search-bar input {
@@ -428,118 +255,222 @@ footer {
 }
 
 
-/* Main Content */
-main {
-    margin: 0px; /* Prevent sidebar overlap */
-    padding: 20px;
-    transition: margin-left 0.3s ease-in-out;
+
+
+
+.menu-icon {
+  font-size: 25px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }
 
-/* Icône du menu */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px 15px;
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    position: absolute; /* Allows it to be placed anywhere */
-    top: 10px; /* Adjust to move it down from the top */
-    left: 10px; /* Adjust to move it from the left */
-  }
-  
-  
-  /* Barre latérale */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    transition: 0.3s;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  
-  }
-  
-  /* Bouton de fermeture */
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    background: none;
-    border: none;
-    color: black;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: none;
-  }
-  
-  /* Liste des liens */
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 60px 0 0;
-  }
-  
-  .sidebar ul li {
-    padding: 15px;
-    transition: all ease-in-out 0.3s;
-    cursor: pointer;
-  }
-  .sidebar a:hover {
-    transform: translateY(-3px);
-  }
-  
-  
-  
-  .sidebar ul li a {
-    display: flex;
-    align-items: center;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    font-weight: bold;
-    transition: all ease-in-out 0.3s;
-    cursor: pointer;
-    box-shadow: none;
-  }
-  
-  /* Lien actif */
-  .sidebar ul li a.active {
-    color: blue;
-  }
-  
-  /* Pied de la barre */
-  .sidebar-footer {
-    padding: 15px;
-    border-top: 1px solid #ddd;
-  }
-  
-  .sidebar-footer a {
-    display: flex;
-    align-items: center;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
-    font-weight: bold;
-    box-shadow: none;
-  }
-  
-  /* Bouton déconnexion */
-  .sidebar-footer .logout {
-    color: red;
-  }
+
+
+
+/* 🌟 Sidebar Container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  overflow-y: auto; /* Active le défilement vertical si nécessaire */
+  left: -250px; /* Sidebar is hidden by default */
+  width: 250px;
+  height: 100%;
+  background: #ffffff;
+  color: #333;
+  transition: left 0.3s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #ddd;
+}
+
+/* icons */
+
+/* Style for icons */
+.sidebar ul li a i,
+.sidebar-footer a i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #555;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Change icon color on hover */
+.sidebar ul li a:hover i,
+.sidebar-footer a:hover i {
+  color: blue;
+}
+.sidebar-footer .logout:hover i{
+  color: red;
+}
+
+/* ✖ Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 22px;
+  cursor: pointer;
+ 
+}
+
+
+/* 📌 Sidebar Navigation Links */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0;
+}
+
+.sidebar ul li {
+  padding: 15px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.sidebar ul li:hover {
+  background: #f0f0f0;
+}
+
+/* 🌟 Sidebar Links */
+.sidebar ul li a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+  background: rgba(0, 0, 255, 0.1);
+  color: blue;
+  transform: translateX(5px);
+}
+
+/* 🔵 Active Link */
+.sidebar ul li a.active {
+  color: blue;
+  border-left: 4px solid blue;
+  background: rgba(0, 0, 255, 0.1);
+}
+
+/* ⚙ Sidebar Footer (Settings & Logout) */
+.sidebar-footer {
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-footer a {
+  display: flex;
+  align-items: center;
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.sidebar-footer a:hover {
+  background: rgba(0, 0, 255, 0.1);
+  color: blue;
+  transform: translateX(5px);
+}
+
+/* 🔴 Logout Button */
+.sidebar-footer .logout {
+  color: red;
+  font-weight: bold;
+}
+
+.sidebar-footer .logout:hover {
+  background: rgba(255, 0, 0, 0.1);
+  color: darkred;
+}
+
+/* 📌 Sidebar Visibility */
+.sidebar.active {
+  left: 0;
+}
+
+* Le footer reste en bas mais peut défiler si nécessaire */
+.sidebar-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* Alignement à gauche */
+  gap: 5px; /* Espace entre les éléments */
+  margin-top: 0px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd; /* Séparateur propre */
+}
+.sidebar-footer a {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Espacement entre l’icône et le texte */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 0px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+.sidebar-footer a img {
+  width: 20px; /* Taille des icônes */
+  height: 20px;
+  margin-left: 10px;
+}
+
+.sidebar-footer a.logout {
+  color: red; /* Se déconnecter en rouge */
+}
+.sidebar-footer img,
+.sidebar-footer i {
+  width: 25px; /* Taille uniforme */
+  height: 25px;
+  display: inline-block; /* Toujours affiché */
+}
+
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: black; /* Couleur normale */
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.sidebar-menu li a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.sidebar-menu li a:hover {
+  color: #1A0495; /* Bleu au survol */
+}
+
   
   /* Affichage du menu */
   .sidebar.active {
     left: 0;
   }
+
   
 
   .profile-icon {
