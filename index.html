@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Gestion des Formations</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+<body>
 <div>
     <div class="menu-icon" onclick="toggleNav()">☰</div>
 <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
             <div class="sidebar-header">
-                <button class="close-btn" id="closeSidebar">☰</button>
+              <button class="close-btn" onclick="toggleNav()">✖</button>
+      
             </div>
 
             <ul class="sidebar-menu">
@@ -295,7 +296,10 @@
                 </div>
                 <footer>01, Rue de Tripoli Hussein-Dey Alger، Hussien - Dey 16040 – Alger.</footer>
             </div>
-            <script src="index.js" defer></script>
+           
 
         </div>
     </section>
+     <script src="index.js" defer></script>
+  </body>
+</html>

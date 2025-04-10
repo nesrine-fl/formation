@@ -116,30 +116,57 @@ document.addEventListener("DOMContentLoaded", function () {
         const deleteButton = row.querySelector(".fa-trash");
         const shareButton = row.querySelector(".fa-share");
 
-        // Modifier une formation
-        editButton.addEventListener("click", function () {
-            const cells = row.querySelectorAll("td:not(:first-child, .actions)");
-            if (editButton.classList.contains("editing")) {
-                // Sauvegarde
-                cells.forEach(cell => {
-                    const input = cell.querySelector("input");
-                    if (input) {
-                        cell.innerHTML = input.value;
-                    }
-                });
-                editButton.classList.remove("editing");
-            } else {
-                // Passage en mode édition
-                cells.forEach(cell => {
-                    const input = document.createElement("input");
-                    input.type = "text";
-                    input.value = cell.textContent.trim();
-                    cell.innerHTML = "";
-                    cell.appendChild(input);
-                });
-                editButton.classList.add("editing");
+      // Modifier une formation
+editButton.addEventListener("click", function () {
+    const cells = row.querySelectorAll("td:not(:first-child, .actions)");
+    
+    if (editButton.classList.contains("editing")) {
+        // Sauvegarde des modifications
+        cells.forEach(cell => {
+            const input = cell.querySelector("input");
+            if (input) {
+                cell.innerHTML = input.value;
             }
         });
+        editButton.classList.remove("editing");
+    } else {
+        // Passage en mode édition avec un style de "carte"
+        cells.forEach(cell => {
+            const input = document.createElement("input");
+            input.type = "text";
+            input.value = cell.textContent.trim();
+            
+            // Appliquer un style de "carte" pour l'input
+            input.style.padding = "12px";
+            input.style.borderRadius = "8px";
+            input.style.border = "1px solid #ddd";
+            input.style.width = "100%";
+            input.style.boxSizing = "border-box";
+            input.style.fontSize = "16px";
+            input.style.transition = "all 0.3s ease"; // Smooth transition
+            input.style.backgroundColor = "#f9f9f9";
+            
+            // Ajouter une ombre légère pour un effet de carte
+            input.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+            
+            // Ajouter une bordure plus nette lors du focus
+            input.addEventListener("focus", () => {
+                input.style.border = "1px solid #007bff";
+                input.style.boxShadow = "0 4px 8px rgba(0, 123, 255, 0.2)";
+            });
+
+            input.addEventListener("blur", () => {
+                input.style.border = "1px solid #ddd";
+                input.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+            });
+
+            cell.innerHTML = "";
+            cell.appendChild(input);
+        });
+        editButton.classList.add("editing");
+    }
+});
+
 
         // Supprimer une formation
         deleteButton.addEventListener("click", function () {
